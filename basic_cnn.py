@@ -1,7 +1,11 @@
 # Adapted from https://www.tensorflow.org/tutorials/layers
 
-from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+from fruit_loader.py import fruit_loader
+
+fruit, labels = fruit_loader()
+fruit_ds = tf.data.Dataset.from_tensor_slices(fruit)
+print(fruit_ds)
+exit()
 
 import tensorflow as tf
 sess = tf.InteractiveSession()
