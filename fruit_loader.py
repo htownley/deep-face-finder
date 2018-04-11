@@ -23,4 +23,4 @@ def fruit_loader():
     id_to_label_dict = {v: k for k, v in label_to_id_dict.items()}
     label_ids = np.array([label_to_id_dict[x] for x in labels])
 
-    return (fruit_images, labels)
+    return (fruit_images, label_ids)
