@@ -3,11 +3,14 @@ import glob
 import cv2
 import os
 
-def fruit_loader():
+def fruit_loader(data_type='train'):
     fruit_images = []
     labels = []
+    path = './fruits-360/Training/*'
+    if data_type == 'test':
+        path = './fruits-360/Validation/*'
 
-    for fruit_dir_path in glob.glob("./fruits-360/Training/*"):
+    for fruit_dir_path in glob.glob(path):
         fruit_label = fruit_dir_path.split("/")[-1]
         for image_path in glob.glob(os.path.join(fruit_dir_path, "*.jpg")):
             image = cv2.imread(image_path, cv2.IMREAD_COLOR)
