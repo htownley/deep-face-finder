@@ -1,13 +1,23 @@
 # Adapted from https://www.tensorflow.org/tutorials/layers
 
-from fruit_loader.py import fruit_loader
+from fruit_loader import fruit_loader
+import tensorflow as tf
+
+
+#######################################
+#####  Load in data  ##################
+#######################################
 
 fruit, labels = fruit_loader()
 fruit_ds = tf.data.Dataset.from_tensor_slices(fruit)
 print(fruit_ds)
 exit()
 
-import tensorflow as tf
+
+#######################################
+#####  Build neural net  ##############
+#######################################
+
 sess = tf.InteractiveSession()
 x = tf.placeholder(tf.float32, shape=[None, 784])
 y_ = tf.placeholder(tf.float32, shape=[None, 10])
@@ -40,13 +50,10 @@ h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
 h_pool2 = max_pool_2x2(h_conv2)
 
 
-
-
 W_fc1 = weight_variable([7 * 7 * 64, 1024])
 b_fc1 = bias_variable([1024])
 h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
 h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
-
 
 
 keep_prob = tf.placeholder(tf.float32)
