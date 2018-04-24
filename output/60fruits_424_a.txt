@@ -1,0 +1,439 @@
+-bash-4.4$ python basic_cnn.py
+loading data
+Apple Braeburn
+Apple Golden 1
+Apple Golden 2
+Apple Golden 3
+Apple Granny Smith
+Apple Red 1
+Apple Red 2
+Apple Red 3
+Apple Red Delicious
+Apple Red Yellow
+Apricot
+Avocado
+Avocado ripe
+Banana
+Banana Red
+Cactus fruit
+Carambula
+Cherry
+Clementine
+Cocos
+Dates
+Granadilla
+Grape Pink
+Grape White
+Grape White 2
+Grapefruit Pink
+Grapefruit White
+Guava
+Huckleberry
+Kaki
+Kiwi
+Kumquats
+Lemon
+Lemon Meyer
+Limes
+Litchi
+Mandarine
+Mango
+Maracuja
+Nectarine
+Orange
+Papaya
+Passion Fruit
+Peach
+Peach Flat
+Pear
+Pear Abate
+Pear Monster
+Pear Williams
+Pepino
+Pineapple
+Pitahaya Red
+Plum
+Pomegranate
+Quince
+Raspberry
+Salak
+Strawberry
+Tamarillo
+Tangelo
+2018-04-24 01:02:31.199763: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-04-24 01:02:31.203672: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2018-04-24 01:02:31.203711: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: perch.zoo.cs.yale.edu
+2018-04-24 01:02:31.203726: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: perch.zoo.cs.yale.edu
+2018-04-24 01:02:31.203795: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.25.0
+2018-04-24 01:02:31.203826: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.25  Wed Jan 24 20:02:43 PST 2018
+GCC version:  gcc version 7.3.1 20180130 (Red Hat 7.3.1-2) (GCC)
+"""
+2018-04-24 01:02:31.203854: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.25.0
+2018-04-24 01:02:31.203870: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 390.25.0
+Apple Red Delicious
+Huckleberry
+Litchi
+Pear
+Strawberry
+Avocado
+Pomegranate
+Dates
+Carambula
+Apple Braeburn
+Apple Golden 1
+Apple Golden 2
+Apple Golden 3
+Apple Granny Smith
+Apple Red 1
+Apple Red 2
+Apple Red 3
+Apple Red Yellow
+Apricot
+Avocado ripe
+Banana
+Banana Red
+Cactus fruit
+Cherry
+Clementine
+Cocos
+Granadilla
+Grape Pink
+Grape White
+Grape White 2
+Grapefruit Pink
+Grapefruit White
+Guava
+Kaki
+Kiwi
+Kumquats
+Lemon
+Lemon Meyer
+Limes
+Mandarine
+Mango
+Maracuja
+Nectarine
+Orange
+Papaya
+Passion Fruit
+Peach
+Peach Flat
+Pear Abate
+Pear Monster
+Pear Williams
+Pepino
+Pineapple
+Pitahaya Red
+Plum
+Quince
+Raspberry
+Salak
+Tamarillo
+Tangelo
+initalizing network
+()
+hyperparameters
+('number_of_fruits:  ', 60)
+('learning_rate:  ', 0.0001)
+()
+starting train
+Epoch: 0
+train accuracy 0
+test accuracy 0.0266722
+Epoch: 1
+train accuracy 0
+test accuracy 0.0239843
+Epoch: 2
+train accuracy 0
+test accuracy 0.0339088
+Epoch: 3
+train accuracy 0
+test accuracy 0.05107
+Epoch: 4
+train accuracy 0
+test accuracy 0.0863228
+Epoch: 5
+train accuracy 0.08
+test accuracy 0.0975912
+Epoch: 6
+train accuracy 0.8
+test accuracy 0.0961439
+Epoch: 7
+train accuracy 0.68
+test accuracy 0.106999
+Epoch: 8
+train accuracy 0.08
+test accuracy 0.0916985
+Epoch: 9
+train accuracy 0.96
+test accuracy 0.121369
+Epoch: 10
+train accuracy 0.88
+test accuracy 0.152383
+Epoch: 11
+train accuracy 0.76
+test accuracy 0.169958
+Epoch: 12
+train accuracy 0.82
+test accuracy 0.163755
+Epoch: 13
+train accuracy 0.9
+test accuracy 0.152176
+Epoch: 14
+train accuracy 0.08
+test accuracy 0.167373
+Epoch: 15
+train accuracy 1
+test accuracy 0.194562
+Epoch: 16
+train accuracy 0.98
+test accuracy 0.193218
+Epoch: 17
+train accuracy 1
+test accuracy 0.205624
+Epoch: 18
+train accuracy 1
+test accuracy 0.206451
+Epoch: 19
+train accuracy 0.68
+test accuracy 0.221855
+Epoch: 20
+train accuracy 0.74
+test accuracy 0.215859
+Epoch: 21
+train accuracy 0.92
+test accuracy 0.251525
+Epoch: 22
+train accuracy 0.96
+test accuracy 0.192495
+Epoch: 23
+train accuracy 0.88
+test accuracy 0.193218
+Epoch: 24
+train accuracy 1
+test accuracy 0.279748
+Epoch: 25
+train accuracy 0.98
+test accuracy 0.31376
+Epoch: 26
+train accuracy 0.86
+test accuracy 0.317378
+Epoch: 27
+train accuracy 0.92
+test accuracy 0.324512
+Epoch: 28
+train accuracy 0.98
+test accuracy 0.361729
+Epoch: 29
+train accuracy 1
+test accuracy 0.377339
+Epoch: 30
+train accuracy 1
+test accuracy 0.447534
+Epoch: 31
+train accuracy 1
+test accuracy 0.465006
+Epoch: 32
+train accuracy 0.98
+test accuracy 0.420242
+Epoch: 33
+train accuracy 1
+test accuracy 0.422826
+Epoch: 34
+train accuracy 0.96
+test accuracy 0.406492
+Epoch: 35
+train accuracy 0.86
+test accuracy 0.428202
+Epoch: 36
+train accuracy 0.58
+test accuracy 0.420139
+Epoch: 37
+train accuracy 1
+test accuracy 0.435335
+Epoch: 38
+train accuracy 0.76
+test accuracy 0.448051
+Epoch: 39
+train accuracy 0.98
+test accuracy 0.388401
+Epoch: 40
+train accuracy 1
+test accuracy 0.438644
+Epoch: 41
+train accuracy 1
+test accuracy 0.38013
+Epoch: 42
+train accuracy 0.88
+test accuracy 0.42965
+Epoch: 43
+train accuracy 0.96
+test accuracy 0.507392
+Epoch: 44
+train accuracy 1
+test accuracy 0.451566
+Epoch: 45
+train accuracy 1
+test accuracy 0.457356
+Epoch: 46
+train accuracy 1
+test accuracy 0.59816
+Epoch: 47
+train accuracy 0.98
+test accuracy 0.418174
+Epoch: 48
+train accuracy 1
+test accuracy 0.632999
+Epoch: 49
+train accuracy 1
+test accuracy 0.365967
+Epoch: 50
+train accuracy 0.98
+test accuracy 0.519074
+Epoch: 51
+train accuracy 1
+test accuracy 0.560116
+Epoch: 52
+train accuracy 0.84
+test accuracy 0.586064
+Epoch: 53
+train accuracy 0.98
+test accuracy 0.638065
+Epoch: 54
+train accuracy 1
+test accuracy 0.735863
+Epoch: 55
+train accuracy 0.98
+test accuracy 0.543575
+Epoch: 56
+train accuracy 1
+test accuracy 0.631242
+Epoch: 57
+train accuracy 1
+test accuracy 0.795617
+Epoch: 58
+train accuracy 1
+test accuracy 0.77463
+Epoch: 59
+train accuracy 1
+test accuracy 0.691099
+Epoch: 60
+train accuracy 0.96
+test accuracy 0.848858
+Epoch: 61
+train accuracy 0.74
+test accuracy 0.659154
+Epoch: 62
+train accuracy 0.86
+test accuracy 0.79634
+Epoch: 63
+train accuracy 1
+test accuracy 0.843895
+Epoch: 64
+train accuracy 1
+test accuracy 0.903856
+Epoch: 65
+train accuracy 1
+test accuracy 0.877804
+Epoch: 66
+train accuracy 1
+test accuracy 0.894655
+Epoch: 67
+train accuracy 1
+test accuracy 0.915745
+Epoch: 68
+train accuracy 1
+test accuracy 0.814122
+Epoch: 69
+train accuracy 1
+test accuracy 0.894759
+Epoch: 70
+train accuracy 0.96
+test accuracy 0.729557
+Epoch: 71
+train accuracy 0.98
+test accuracy 0.816396
+Epoch: 72
+train accuracy 1
+test accuracy 0.916572
+Epoch: 73
+train accuracy 1
+test accuracy 0.901685
+Epoch: 74
+train accuracy 0.98
+test accuracy 0.820841
+Epoch: 75
+train accuracy 1
+test accuracy 0.833351
+Epoch: 76
+train accuracy 1
+test accuracy 0.707123
+Epoch: 77
+train accuracy 1
+test accuracy 0.856818
+Epoch: 78
+train accuracy 0.96
+test accuracy 0.749922
+Epoch: 79
+train accuracy 1
+test accuracy 0.936318
+Epoch: 80
+train accuracy 1
+test accuracy 0.94128
+Epoch: 81
+train accuracy 1
+test accuracy 0.950481
+Epoch: 82
+train accuracy 1
+test accuracy 0.951204
+Epoch: 83
+train accuracy 1
+test accuracy 0.951411
+Epoch: 84
+train accuracy 1
+test accuracy 0.952238
+Epoch: 85
+train accuracy 1
+test accuracy 0.953065
+Epoch: 86
+train accuracy 1
+test accuracy 0.953582
+Epoch: 87
+train accuracy 1
+test accuracy 0.953996
+Epoch: 88
+train accuracy 1
+test accuracy 0.954719
+Epoch: 89
+train accuracy 1
+test accuracy 0.955443
+Epoch: 90
+train accuracy 1
+test accuracy 0.94955
+Epoch: 91
+train accuracy 1
+test accuracy 0.950067
+Epoch: 92
+train accuracy 1
+test accuracy 0.668872
+Epoch: 93
+train accuracy 1
+test accuracy 0.905303
+Epoch: 94
+train accuracy 1
+test accuracy 0.929081
+Epoch: 95
+train accuracy 1
+test accuracy 0.949447
+Epoch: 96
+train accuracy 1
+test accuracy 0.954202
+Epoch: 97
+train accuracy 1
+test accuracy 0.954099
+Epoch: 98
+train accuracy 1
+test accuracy 0.954513
+Epoch: 99
+train accuracy 1
+test accuracy 0.954306
