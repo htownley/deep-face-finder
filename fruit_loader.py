@@ -5,7 +5,7 @@ import glob
 import os
 from PIL import Image, ImageDraw
 
-number_of_fruits = 10
+number_of_fruits = 60
 
 
 def fruit_loader(data_type='train'):
@@ -33,13 +33,14 @@ def fruit_loader(data_type='train'):
 			img = Image.open(image_path)
 
 			# draw red circle in center
-			x, y =  img.size
-			eX, eY = 20, 20 #Size of Bounding Box for ellipse
-			bbox =  (x/2 - eX/2, y/2 - eY/2, x/2 + eX/2, y/2 + eY/2)
-			draw = ImageDraw.Draw(img)
-			draw.ellipse(bbox, fill=(255, 0, 0))
-			del draw
+			# x, y =  img.size
+			# eX, eY = 20, 20 #Size of Bounding Box for ellipse
+			# bbox =  (x/2 - eX/2, y/2 - eY/2, x/2 + eX/2, y/2 + eY/2)
+			# draw = ImageDraw.Draw(img)
+			# draw.ellipse(bbox, fill=(255, 0, 0))
+			# del draw
 
+			# resize image
 			wpercent = (45/float(img.size[0]))
 			hsize = int((float(img.size[1])*float(wpercent)))
 			img = img.resize((45,hsize))
