@@ -38,15 +38,7 @@ def next_batch(array, batch_size, index):
 
 print("initalizing network")
 
-# hyperparameters
-number_of_fruits = 60
-learning_rate = 1e-4
-
-print()
-print("hyperparameters")
-print("number_of_fruits:  ", number_of_fruits)
-print("learning_rate:  ", learning_rate)
-print()
+number_of_fruits = 10
 
 x = tf.placeholder(tf.float32, shape=[None, 45, 45, 3])
 labels = tf.placeholder(tf.float32, shape=[None, number_of_fruits])
@@ -81,7 +73,7 @@ logits = tf.layers.dense(inputs=dropout, units=number_of_fruits)
 
 # Loss and optimizer
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits))
-train_step = tf.train.AdamOptimizer(learning_rate).minimize(cross_entropy)
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 
 # Calculate accuracy
 correct_prediction = tf.equal(tf.argmax(logits,1), tf.argmax(labels,1))
