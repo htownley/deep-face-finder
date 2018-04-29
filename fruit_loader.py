@@ -5,10 +5,8 @@ import glob
 import os
 from PIL import Image, ImageDraw
 
-number_of_fruits = 60
 
-
-def fruit_loader(data_type='train'):
+def fruit_loader(data_type='train', number_of_fruits=10):
 	fruit_images = []
 	labels = []
 	path = './fruits-360/Training/*'

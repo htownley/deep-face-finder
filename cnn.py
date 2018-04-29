@@ -9,24 +9,40 @@ import os
 # Uncomment to use CPU instead of GPU
 # os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
+#######################################
+#####  Hyperparameters  ##############
+#######################################
 
-print("loading data")
-test_images, test_labels = fruit_loader('test')
-train_images, train_labels = fruit_loader('train')
+number_of_fruits = 10
+learning_rate = 0.001
+keep_prob_hyperparameter = 0.6
+batch_size = 50
+num_epochs = 100
 
-# plt.imshow(test_images[0], interpolation='nearest')
-# plt.show()
-# exit()
+print("\nHYPERPARAMETERS:")
+print("batch_size:  ", batch_size)
+print("num_epochs:  ", num_epochs)
+print("number_of_fruits:  ", number_of_fruits)
+print("learning_rate:  ", learning_rate)
+print("keep_prob_hyperparameter:  ", keep_prob_hyperparameter)
+print("\n")
+
 
 #######################################
 #####  Load in data  ##################
 #######################################
 
-#######################################
-#####  Build neural net  ##############
-#######################################
+
+print("loading data")
+test_images, test_labels = fruit_loader('test', number_of_fruits)
+train_images, train_labels = fruit_loader('train', number_of_fruits)
+
+# plt.imshow(test_images[0], interpolation='nearest')
+# plt.show()
+# exit()
 
 
+# function for reading in a batch of data
 def next_batch(array, batch_size, index):
     index = index + 1
     length = len(array)
@@ -36,9 +52,12 @@ def next_batch(array, batch_size, index):
     return batch
 
 
-print("initalizing network")
 
-number_of_fruits = 10
+#######################################
+#####  Build neural net  ##############
+#######################################
+
+print("initalizing network")
 
 x = tf.placeholder(tf.float32, shape=[None, 45, 45, 3])
 labels = tf.placeholder(tf.float32, shape=[None, number_of_fruits])
@@ -73,17 +92,14 @@ logits = tf.layers.dense(inputs=dropout, units=number_of_fruits)
 
 # Loss and optimizer
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits))
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+train_step = tf.train.AdamOptimizer(learning_rate).minimize(cross_entropy)
 
 # Calculate accuracy
 correct_prediction = tf.equal(tf.argmax(logits,1), tf.argmax(labels,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 
-batch_size = 50
-num_epochs = 100
 init = tf.global_variables_initializer()
-
 
 with tf.Session() as sess:
   init.run()
@@ -92,10 +108,10 @@ with tf.Session() as sess:
   for epoch in range(num_epochs):
       for i in range(len(train_images) // batch_size):
       	batch = (next_batch(train_images, 50, i), next_batch(train_labels, 50, i))
-      	train_step.run(feed_dict={x: batch[0], labels: batch[1], keep_prob: 0.5})
+      	train_step.run(feed_dict={x: batch[0], labels: batch[1], keep_prob: keep_prob_hyperparameter})
 
       print("Epoch: %g"%epoch)
-      print("train accuracy %g"%accuracy.eval(feed_dict={x:batch[0], labels: batch[1], keep_prob: 0.95}))
+      print("train accuracy %g"%accuracy.eval(feed_dict={x:batch[0], labels: batch[1], keep_prob: 1.0}))
       print("test accuracy %g"%accuracy.eval(feed_dict={x: test_images, labels: test_labels, keep_prob: 1.0}))
 
   sess.close()
