@@ -14,12 +14,12 @@ import os
 #######################################
 
 number_of_fruits = 10
-learning_rate = 0.001
+learning_rate = 0.0001
 keep_prob_hyperparameter = 0.6
 batch_size = 50
 num_epochs = 100
 
-print("\nHYPERPARAMETERS:")
+print("\n CNN HYPERPARAMETERS:")
 print("batch_size:  ", batch_size)
 print("num_epochs:  ", num_epochs)
 print("number_of_fruits:  ", number_of_fruits)
