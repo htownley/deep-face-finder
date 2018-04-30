@@ -5,8 +5,7 @@ import glob
 import os
 from PIL import Image, ImageDraw
 
-
-def fruit_loader(data_type='train', number_of_fruits=10):
+def fruit_loader(data_type='train', start=0, number_of_fruits=10):
 	fruit_images = []
 	labels = []
 	path = './fruits-360/Training/*'
@@ -17,9 +16,13 @@ def fruit_loader(data_type='train', number_of_fruits=10):
 	for fruit_dir_path in glob.glob(path):
 		fruit_label = fruit_dir_path.split("/")[-1]
 
-		counter += 1
-		if counter > number_of_fruits:
+		if counter < start:
+			counter += 1
+			continue
+		if counter >= number_of_fruits + start:
 			break
+		counter += 1
+
 		print(fruit_label)
 
 		for image_path in glob.glob(os.path.join(fruit_dir_path, "*.jpg")):
@@ -57,6 +60,13 @@ def fruit_loader(data_type='train', number_of_fruits=10):
 	#fruit_images = fruit_images.reshape(fruit_images.shape[0], 100*100)
 
 	labels = np.array(labels)
+
+	def unison_shuffled_copies(a, b):
+	    assert len(a) == len(b)
+	    p = np.random.permutation(len(a))
+	    return a[p], b[p]
+
+	fruit_images, labels = unison_shuffled_copies(fruit_images, labels)
 
 	label_to_id_dict = {v:i for i,v in enumerate(np.unique(labels))}
 	id_to_label_dict = {v: k for k, v in label_to_id_dict.items()}

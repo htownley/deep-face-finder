@@ -1,0 +1,300 @@
+Epoch: 0
+train accuracy 0
+test accuracy 0.14021
+Epoch: 1
+train accuracy 0
+test accuracy 0.155652
+Epoch: 2
+train accuracy 0
+test accuracy 0.16924
+Epoch: 3
+train accuracy 0
+test accuracy 0.200741
+Epoch: 4
+train accuracy 0
+test accuracy 0.207536
+Epoch: 5
+train accuracy 0
+test accuracy 0.237183
+Epoch: 6
+train accuracy 0
+test accuracy 0.238419
+Epoch: 7
+train accuracy 0
+test accuracy 0.240272
+Epoch: 8
+train accuracy 0
+test accuracy 0.245831
+Epoch: 9
+train accuracy 0.18
+test accuracy 0.257566
+Epoch: 10
+train accuracy 0.38
+test accuracy 0.281655
+Epoch: 11
+train accuracy 0.48
+test accuracy 0.307597
+Epoch: 12
+train accuracy 0.58
+test accuracy 0.333539
+Epoch: 13
+train accuracy 0.92
+test accuracy 0.370599
+Epoch: 14
+train accuracy 1
+test accuracy 0.424954
+Epoch: 15
+train accuracy 1
+test accuracy 0.460778
+Epoch: 16
+train accuracy 1
+test accuracy 0.49475
+Epoch: 17
+train accuracy 1
+test accuracy 0.521309
+Epoch: 18
+train accuracy 1
+test accuracy 0.531192
+Epoch: 19
+train accuracy 1
+test accuracy 0.539222
+Epoch: 20
+train accuracy 1
+test accuracy 0.55034
+Epoch: 21
+train accuracy 1
+test accuracy 0.561458
+Epoch: 22
+train accuracy 1
+test accuracy 0.566399
+Epoch: 23
+train accuracy 1
+test accuracy 0.571958
+Epoch: 24
+train accuracy 1
+test accuracy 0.578135
+Epoch: 25
+train accuracy 1
+test accuracy 0.582458
+Epoch: 26
+train accuracy 1
+test accuracy 0.586782
+Epoch: 27
+train accuracy 1
+test accuracy 0.591106
+Epoch: 28
+train accuracy 1
+test accuracy 0.593576
+Epoch: 29
+train accuracy 1
+test accuracy 0.597282
+Epoch: 30
+train accuracy 1
+test accuracy 0.600988
+Epoch: 31
+train accuracy 1
+test accuracy 0.602841
+Epoch: 32
+train accuracy 1
+test accuracy 0.60593
+Epoch: 33
+train accuracy 1
+test accuracy 0.607783
+Epoch: 34
+train accuracy 1
+test accuracy 0.610871
+Epoch: 35
+train accuracy 1
+test accuracy 0.610871
+Epoch: 36
+train accuracy 1
+test accuracy 0.610253
+Epoch: 37
+train accuracy 1
+test accuracy 0.610253
+Epoch: 38
+train accuracy 1
+test accuracy 0.612724
+Epoch: 39
+train accuracy 1
+test accuracy 0.617048
+Epoch: 40
+train accuracy 1
+test accuracy 0.619518
+Epoch: 41
+train accuracy 1
+test accuracy 0.618901
+Epoch: 42
+train accuracy 1
+test accuracy 0.620754
+Epoch: 43
+train accuracy 1
+test accuracy 0.623224
+Epoch: 44
+train accuracy 1
+test accuracy 0.626313
+Epoch: 45
+train accuracy 1
+test accuracy 0.629401
+Epoch: 46
+train accuracy 1
+test accuracy 0.630019
+Epoch: 47
+train accuracy 1
+test accuracy 0.632489
+Epoch: 48
+train accuracy 1
+test accuracy 0.63496
+Epoch: 49
+train accuracy 1
+test accuracy 0.635577
+Epoch: 50
+train accuracy 1
+test accuracy 0.635577
+Epoch: 51
+train accuracy 1
+test accuracy 0.639901
+Epoch: 52
+train accuracy 1
+test accuracy 0.639901
+Epoch: 53
+train accuracy 1
+test accuracy 0.64299
+Epoch: 54
+train accuracy 1
+test accuracy 0.64299
+Epoch: 55
+train accuracy 1
+test accuracy 0.643607
+Epoch: 56
+train accuracy 1
+test accuracy 0.646695
+Epoch: 57
+train accuracy 1
+test accuracy 0.648548
+Epoch: 58
+train accuracy 1
+test accuracy 0.650401
+Epoch: 59
+train accuracy 1
+test accuracy 0.651637
+Epoch: 60
+train accuracy 1
+test accuracy 0.652872
+Epoch: 61
+train accuracy 1
+test accuracy 0.654107
+Epoch: 62
+train accuracy 1
+test accuracy 0.654725
+Epoch: 63
+train accuracy 1
+test accuracy 0.656578
+Epoch: 64
+train accuracy 1
+test accuracy 0.661519
+Epoch: 65
+train accuracy 1
+test accuracy 0.662137
+Epoch: 66
+train accuracy 1
+test accuracy 0.665225
+Epoch: 67
+train accuracy 1
+test accuracy 0.668314
+Epoch: 68
+train accuracy 1
+test accuracy 0.668931
+Epoch: 69
+train accuracy 1
+test accuracy 0.670167
+Epoch: 70
+train accuracy 1
+test accuracy 0.670784
+Epoch: 71
+train accuracy 1
+test accuracy 0.673873
+Epoch: 72
+train accuracy 1
+test accuracy 0.676961
+Epoch: 73
+train accuracy 1
+test accuracy 0.678196
+Epoch: 74
+train accuracy 1
+test accuracy 0.680667
+Epoch: 75
+train accuracy 1
+test accuracy 0.681902
+Epoch: 76
+train accuracy 1
+test accuracy 0.681285
+Epoch: 77
+train accuracy 1
+test accuracy 0.684373
+Epoch: 78
+train accuracy 1
+test accuracy 0.684991
+Epoch: 79
+train accuracy 1
+test accuracy 0.687461
+Epoch: 80
+train accuracy 1
+test accuracy 0.689314
+Epoch: 81
+train accuracy 1
+test accuracy 0.691167
+Epoch: 82
+train accuracy 1
+test accuracy 0.69055
+Epoch: 83
+train accuracy 1
+test accuracy 0.689932
+Epoch: 84
+train accuracy 1
+test accuracy 0.691785
+Epoch: 85
+train accuracy 1
+test accuracy 0.692403
+Epoch: 86
+train accuracy 1
+test accuracy 0.691785
+Epoch: 87
+train accuracy 1
+test accuracy 0.692403
+Epoch: 88
+train accuracy 1
+test accuracy 0.693638
+Epoch: 89
+train accuracy 1
+test accuracy 0.695491
+Epoch: 90
+train accuracy 1
+test accuracy 0.697962
+Epoch: 91
+train accuracy 1
+test accuracy 0.699815
+Epoch: 92
+train accuracy 1
+test accuracy 0.701668
+Epoch: 93
+train accuracy 1
+test accuracy 0.702285
+Epoch: 94
+train accuracy 1
+test accuracy 0.704138
+Epoch: 95
+train accuracy 1
+test accuracy 0.704756
+Epoch: 96
+train accuracy 1
+test accuracy 0.704756
+Epoch: 97
+train accuracy 1
+test accuracy 0.705991
+Epoch: 98
+train accuracy 1
+test accuracy 0.707227
+Epoch: 99
+train accuracy 1
+test accuracy 0.70908
