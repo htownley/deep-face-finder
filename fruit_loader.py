@@ -5,8 +5,7 @@ import glob
 import os
 from PIL import Image, ImageDraw
 
-
-def fruit_loader(data_type='train', number_of_fruits=10):
+def fruit_loader(data_type='train', start=0, number_of_fruits=10):
 	fruit_images = []
 	labels = []
 	path = './fruits-360/Training/*'
@@ -17,9 +16,12 @@ def fruit_loader(data_type='train', number_of_fruits=10):
 	for fruit_dir_path in glob.glob(path):
 		fruit_label = fruit_dir_path.split("/")[-1]
 
-		counter += 1
-		if counter > number_of_fruits:
+		if counter < start:
+			continue
+		if counter >= number_of_fruits + start:
 			break
+		counter += 1
+
 		print(fruit_label)
 
 		for image_path in glob.glob(os.path.join(fruit_dir_path, "*.jpg")):
