@@ -13,9 +13,10 @@ import os
 #####  Hyperparameters  ##############
 #######################################
 
+start = 10
 number_of_fruits = 10
-learning_rate = 0.0001
-keep_prob_hyperparameter = 0.6
+learning_rate = 8e-05
+keep_prob_hyperparameter = 1
 batch_size = 50
 num_epochs = 100
 
@@ -34,8 +35,8 @@ print("\n")
 
 
 print("loading data")
-test_images, test_labels = fruit_loader('test', number_of_fruits)
-train_images, train_labels = fruit_loader('train', number_of_fruits)
+test_images, test_labels = fruit_loader('test', start, number_of_fruits)
+train_images, train_labels = fruit_loader('train', start, number_of_fruits)
 
 # plt.imshow(test_images[0], interpolation='nearest')
 # plt.show()
@@ -62,7 +63,6 @@ print("initalizing network")
 x = tf.placeholder(tf.float32, shape=[None, 45, 45, 3])
 labels = tf.placeholder(tf.float32, shape=[None, number_of_fruits])
 
-
 conv1 = tf.layers.conv2d(
       inputs=x,
       filters=32,
@@ -85,10 +85,12 @@ pool2_flat = tf.reshape(pool2, [-1, 11 * 11 * 64])
 # Dense Layer
 keep_prob = tf.placeholder(tf.float32)
 dense = tf.layers.dense(inputs=pool2_flat, units=1024, activation=tf.nn.relu)
-dropout = tf.layers.dropout(inputs=dense, rate=(1-keep_prob))
+dropout = tf.nn.dropout(x=dense, keep_prob=keep_prob)
 
 # Logits Layer
 logits = tf.layers.dense(inputs=dropout, units=number_of_fruits)
+prediction = tf.argmax(logits,1)
+right_answer = tf.argmax(labels,1)
 
 # Loss and optimizer
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=logits))
@@ -105,13 +107,20 @@ with tf.Session() as sess:
   init.run()
 
   print ("starting train")
+  batch = None
   for epoch in range(num_epochs):
       for i in range(len(train_images) // batch_size):
-      	batch = (next_batch(train_images, 50, i), next_batch(train_labels, 50, i))
+      	batch = (next_batch(train_images, 250, i), next_batch(train_labels, 250, i))
+
       	train_step.run(feed_dict={x: batch[0], labels: batch[1], keep_prob: keep_prob_hyperparameter})
 
-      print("Epoch: %g"%epoch)
-      print("train accuracy %g"%accuracy.eval(feed_dict={x:batch[0], labels: batch[1], keep_prob: 1.0}))
-      print("test accuracy %g"%accuracy.eval(feed_dict={x: test_images, labels: test_labels, keep_prob: 1.0}))
+      ## Full info:
+      # print("Epoch: %g"%epoch)
+      # print("train accuracy %g"%accuracy.eval(feed_dict={x:batch[0], labels: batch[1], keep_prob: 1.0}))
+      # print("test accuracy %g"%accuracy.eval(feed_dict={x: test_images, labels: test_labels, keep_prob: 1.0}))
 
+      ## easy printing:
+      print("%g\t%g"%(accuracy.eval(feed_dict={x:batch[0], labels: batch[1], keep_prob: 1.0}), accuracy.eval(feed_dict={x: test_images, labels: test_labels, keep_prob: 1.0})))
+
+  print("DONE")
   sess.close()

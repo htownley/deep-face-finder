@@ -17,6 +17,7 @@ def fruit_loader(data_type='train', start=0, number_of_fruits=10):
 		fruit_label = fruit_dir_path.split("/")[-1]
 
 		if counter < start:
+			counter += 1
 			continue
 		if counter >= number_of_fruits + start:
 			break
@@ -59,6 +60,13 @@ def fruit_loader(data_type='train', start=0, number_of_fruits=10):
 	#fruit_images = fruit_images.reshape(fruit_images.shape[0], 100*100)
 
 	labels = np.array(labels)
+
+	def unison_shuffled_copies(a, b):
+	    assert len(a) == len(b)
+	    p = np.random.permutation(len(a))
+	    return a[p], b[p]
+
+	fruit_images, labels = unison_shuffled_copies(fruit_images, labels)
 
 	label_to_id_dict = {v:i for i,v in enumerate(np.unique(labels))}
 	id_to_label_dict = {v: k for k, v in label_to_id_dict.items()}
